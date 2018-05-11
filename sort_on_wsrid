@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# $Id: sort_on_wsrid 6011 2018-04-08 18:31:02Z skylar $
+
+# Accepts hail probability data over STDIN, sorts on WSR_ID and outputs on STDOUT
+
+# Runs on 8 CPUs, suitable for both xe and xk nodes
+
+nice sort --parallel=8 -t, -k 4b,4

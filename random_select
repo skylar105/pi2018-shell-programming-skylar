@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# $Id: random_select 6014 2018-04-08 19:15:02Z skylar $
+
+set -eo pipefail
+
+if [[ $# -eq 0 ]]; then
+    echo "Supply number of lines to select randomly" >&2
+    exit 1
+fi
+
+shuf -n "$1" 
