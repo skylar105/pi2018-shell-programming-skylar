@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-# $Id: wsrid_lines 6013 2018-04-08 19:12:50Z skylar $
-
 # Accepts as input a hail dataset sorted on WSR_ID. Each argument to wsrid_lines will be a
 # weather surveillance radar ID (WSR_ID). Outputs all lines matching the given WSR_IDs.
 
-if [[ $# -eq 0 ]]; then
+if [[ ${#} -eq 0 ]]; then
     echo "Supply at least one WSR_ID to join on" >&2
     exit 1
 fi
@@ -18,7 +16,7 @@ join -t, -1 1 -2 4 <(
     for arg; do
         # Do not output newline on the last argument, since join will interpret that as
         # an empty join field
-        if [[ ${i} -eq $# ]]; then
+        if [[ ${i} -eq ${#} ]]; then
             echo -n "${arg}"
         else
             echo "${arg}"

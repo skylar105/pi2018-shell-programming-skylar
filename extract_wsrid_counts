@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# $Id: extract_wsrid_counts 6012 2018-04-08 19:07:53Z skylar $
-
 # Accepts hail dataset over STDIN, prints unique list of WSR_IDs over STDOUT
 
 nice cut -d, -f4 \
