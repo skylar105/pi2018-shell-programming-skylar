@@ -14,4 +14,4 @@ while getopts ":p:" option; do
     esac
 done
 
-nice sort --parallel="${NUMPROC}" -t, -k 4b,4
+sort --parallel="${NUMPROC}" -t, -k 4b,4

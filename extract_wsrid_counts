@@ -2,6 +2,6 @@
 
 # Accepts hail dataset over STDIN, prints unique list of WSR_IDs over STDOUT
 
-nice cut -d, -f4 \
-    | nice sort \
-    | nice uniq -cd
+cut -d, -f4 \
+    |  sort \
+    |  uniq -cd
