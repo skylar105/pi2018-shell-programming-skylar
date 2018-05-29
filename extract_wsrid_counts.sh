@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Accepts hail dataset over STDIN, prints unique list of WSR_IDs over STDOUT sorted by incidence count
+# Accepts hail dataset sorted by WSR_ID over STDIN, prints unique list of WSR_IDs over STDOUT sorted by incidence count
 
-# Example exection: aprun -q -n 1 -d 32 -N 1 ./extract_wsrid_counts.sh < /projects/training/baqk/hail-2017.csv > ~/scratch/pi2018-shell-programming-skylar/wsir_counts.txt
+# Example exection: aprun -q -n 1 -d 32 -N 1 ./extract_wsrid_counts.sh < ~/scratch/pi2018-shell-programming-skylar/hail-2017.sorted.csv > ~/scratch/pi2018-shell-programming-skylar/wsir_counts.txt
 
 NUMPROC=32
 
