@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Example usage: aprun -q -n 1 -d 1 -N 1 ./random_select.sh 5 < hail-2017.sorted.subset.csv
+
 set -eo pipefail
 
 if [[ ${#} -eq 0 ]]; then

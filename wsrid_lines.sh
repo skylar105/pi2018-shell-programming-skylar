@@ -3,6 +3,8 @@
 # Accepts as input a hail dataset sorted on WSR_ID. Each argument to wsrid_lines will be a
 # weather surveillance radar ID (WSR_ID). Outputs all lines matching the given WSR_IDs.
 
+# Example usage: aprun -q -n 1 -d 1 -N 1 ./wsrid_lines.sh KDEN KBOS KGLD KCXX KCMH < hail-2017.sorted.csv
+
 if [[ ${#} -eq 0 ]]; then
     echo "Supply at least one WSR_ID to join on" >&2
     exit 1
