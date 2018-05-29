@@ -7,7 +7,7 @@
 # Note that if run w/ aprun, you will get the resource usage line included, but this will not match the
 # format of the input CSV file and can be easily thrown away.
 
-# Example execution: aprun -q -n 1 -d 32 -N 1 ./sort_on_wsrid.sh < /projects/training/baqk/hail-2017.csv > hail-2017.sorted.csv
+# Example execution: aprun -q -n 1 -d 32 -N 1 ./sort_on_wsrid.sh < /projects/training/baqk/hail-2017.csv > ~/scratch/pi2018-shell-programming-skylar/hail-2017.sorted.csv
 
 NUMPROC=32
 
