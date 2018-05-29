@@ -4,6 +4,16 @@
 
 # Example exection: aprun -q -n 1 -d 1 -N 1 ./extract_wsrid_counts.sh < /projects/training/baqk/hail-2017.csv > ~/scratch/wsir_counts.txt
 
+NUMPROC=32
+
+while getopts ":p:" option; do
+    case "${option}" in
+        p )
+            NUMPROC="${OPTARG}"
+            ;;
+    esac
+done
+
 cut -d, -f4 \
     | uniq -cd \
-    | sort -nr
+    | sort --parallel="${NUMPROC}" -nr
