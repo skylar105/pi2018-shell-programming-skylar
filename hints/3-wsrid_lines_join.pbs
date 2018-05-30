@@ -6,5 +6,5 @@
 #PBS -o $PBS_JOBID.out
 
 aprun -n 1 -d 1 -N 1 \
-    "${HOME}"/3-wsrid_lines_join.sh KDEN KBOS KGLD KCXX KCMH \
+    "${HOME}"/pi2018-shell-programming-skylar/hints/3-wsrid_lines_join.sh KDEN KBOS KGLD KCXX KCMH \
     < "${HOME}"/scratch/pi2018-shell-programming-skylar/hail-2017.sorted.csv
