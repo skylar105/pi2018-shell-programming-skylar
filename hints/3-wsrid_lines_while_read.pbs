@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#PBS -l nodes=1:ppn=32:xe
+#PBS -l walltime=00:10:00
+#PBS -N 3-wsrid_lines_while_read
+#PBS -e $PBS_JOBID.err
+#PBS -o $PBS_JOBID.out
+
+aprun -n 1 -d 1 -N 1 \
+    "${HOME}"/3-wsrid_lines_while_read.sh KDEN KBOS KGLD KCXX KCMH \
+    < "${HOME}"/scratch/pi2018-shell-programming-skylar/hail-2017.sorted.csv
