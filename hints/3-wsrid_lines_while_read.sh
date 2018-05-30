@@ -13,6 +13,10 @@ fi
 OLDIFS="${IFS}"
 IFS=","
 
+# This method ends up being very inefficient, because it requires looping over the argument array
+# for each line of the input file. A couple of other solutions exist:
+# 1. Create a file/file descriptor to join against
+# 2. Generate a regex alternation to match with egrep or awk
 while read ZTIME LON LAT WSR_ID CELL_ID RANGE AZIMUTH SEVPROB PROB MAXSIZE; do
     for arg; do
         if [[ "${WSR_ID}" = "${arg}" ]]; then
